@@ -410,4 +410,16 @@ var RomanNumerals = new RomanNumeral();
 
 
 
-
+function valuesFromFunc(func, start, end) {
+    var arr = [];
+    if (arguments.length === 2) {
+        for (var i = 0; i < arguments[1]; i++) {
+            arr.push(func(i));
+        }
+    } else {
+        for (var i = start; i < end; i++) {
+            arr.push(func(i));
+        }
+    }
+    return arr;
+}
